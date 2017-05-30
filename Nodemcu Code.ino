@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
-const char* ssid = "WongsawaWifi's Wireless"; 
-const char* password = "Pass"; 
+const char* ssid = "Wireless"; 
+const char* password = "pass"; 
 const int port = 12345;
 WiFiServer server(port); 
 
@@ -67,13 +67,11 @@ void loop() {
       char c = client.read();
       if(c == '1')
       {
-        digitalWrite(pin, HIGH);
-        Serial.println("OPEN");
+        digitalWrite(pin, LOW);
       }
       else 
       {
-         digitalWrite(pin, LOW);
-          Serial.println("CLOSE");
+         digitalWrite(pin, HIGH);
       }
       break;
     }
